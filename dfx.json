@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Sarthak_backend": {
+      "main": "src/Sarthak_backend/main.mo",
+      "type": "motoko"
+    },
+    "Sarthak_frontend": {
+      "dependencies": [
+        "Sarthak_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Sarthak_frontend/src/index.html"
+      },
+      "source": [
+        "src/Sarthak_frontend/assets",
+        "dist/Sarthak_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
